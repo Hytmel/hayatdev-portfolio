@@ -1,160 +1,127 @@
 import { RevealOnScroll } from "../RevealOnScroll";
 
+const projects = [
+  {
+    title: "GuideMe Mobile App",
+    desc: "A mobile application developed with Flutter, focusing on providing an intuitive and responsive user experience with clean UI design and optimal performance.",
+    tech: ["Flutter", "Dart"],
+    color: "teal",
+    link: "#",
+    img: (
+      <svg width="100%" height="100" viewBox="0 0 320 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="320" height="100" rx="18" fill="#2dd4bf" fillOpacity="0.15" />
+        <text x="50%" y="55%" textAnchor="middle" fill="#2dd4bf" fontSize="32" fontFamily="Inter, sans-serif" dy=".3em">GuideMe</text>
+      </svg>
+    ),
+  },
+  {
+    title: "Weather Website",
+    desc: "A web app that displays the weather in your current location and all wilayas in Algeria, integrated with OpenWeatherMap for real-time data.",
+    tech: ["React.js", "OpenWeatherMap API", "JavaScript", "Geolocation"],
+    color: "teal",
+    link: "#",
+    img: (
+      <svg width="100%" height="100" viewBox="0 0 320 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="320" height="100" rx="18" fill="#2dd4bf" fillOpacity="0.15" />
+        <text x="50%" y="55%" textAnchor="middle" fill="#2dd4bf" fontSize="32" fontFamily="Inter, sans-serif" dy=".3em">Weather</text>
+      </svg>
+    ),
+  },
+  {
+    title: "ECOdz Admin Website",
+    desc: "Admin dashboard website created during a hackathon for the ECOdz application, featuring user management and administrative controls with modern web technologies.",
+    tech: ["React.js", "HTML", "CSS", "JavaScript"],
+    color: "purple",
+    link: "#",
+    img: (
+      <svg width="100%" height="100" viewBox="0 0 320 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="320" height="100" rx="18" fill="#a78bfa" fillOpacity="0.15" />
+        <text x="50%" y="55%" textAnchor="middle" fill="#a78bfa" fontSize="32" fontFamily="Inter, sans-serif" dy=".3em">ECOdz</text>
+      </svg>
+    ),
+  },
+  {
+    title: "Personal Portfolio",
+    desc: "A modern, responsive portfolio website showcasing my skills and projects with smooth animations and clean design principles.",
+    tech: ["React.js", "TailwindCSS", "JavaScript", "Responsive Design"],
+    color: "teal",
+    link: "#",
+    img: (
+      <svg width="100%" height="100" viewBox="0 0 320 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="320" height="100" rx="18" fill="#2dd4bf" fillOpacity="0.15" />
+        <text x="50%" y="55%" textAnchor="middle" fill="#2dd4bf" fontSize="32" fontFamily="Inter, sans-serif" dy=".3em">Portfolio</text>
+      </svg>
+    ),
+  },
+  {
+    title: "Coming Soon...",
+    desc: "Working on exciting new projects! Stay tuned for more innovative web and mobile applications.",
+    tech: ["React.js", "Flutter", "New Technologies", "Innovation"],
+    color: "purple",
+    link: "#",
+    img: (
+      <svg width="100%" height="100" viewBox="0 0 320 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="320" height="100" rx="18" fill="#a78bfa" fillOpacity="0.15" />
+        <text x="50%" y="55%" textAnchor="middle" fill="#a78bfa" fontSize="32" fontFamily="Inter, sans-serif" dy=".3em">Soon</text>
+      </svg>
+    ),
+  },
+];
+
 export const Projects = () => {
   return (
     <section
       id="projects"
-      className="min-h-screen flex items-center justify-center py-20"
+      className="min-h-screen flex items-center justify-center py-20 bg-gradient-to-br from-purple-950/60 via-teal-950/40 to-black/80"
     >
       <RevealOnScroll>
-        <div className="max-w-5xl mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
-            {" "}
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-4xl font-extrabold mb-10 bg-gradient-to-r from-teal-400 via-purple-400 to-teal-300 bg-clip-text text-transparent text-center drop-shadow-lg tracking-tight">
             Featured Projects
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition">
-              <h3 className="text-xl font-bold mb-2"> GuideMe Mobile App</h3>
-              <p className="text-gray-400 mb-4">
-                A mobile application developed with Flutter, focusing on providing an intuitive and responsive user experience with clean UI design and optimal performance.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                {["Flutter", "Dart", "Mobile UI/UX", "Cross-platform"].map((tech, key) => (
-                  <span
-                    key={key}
-                    className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 
-                                    hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)] transition-all
-                    "
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-
-              <div className="flex justify-between items-center">
-                <a
-                  href="#"
-                  className="text-blue-400 hover:text-blue-300 transition-colors my-4"
-                >
-                  View Project →
-                </a>
-              </div>
-            </div>
-            <div
-              className="
-              glass p-6 rounded-xl border border-white/10 
-              hover:-translate-y-1 hover:border-blue-500/30
-              hover:shadow-[0_4px_20px_rgba(59,130,246,0.1)]
-              transition-all
-            "
-            >
-              <h3 className="text-xl font-bold mb-2">ECOdz Admin Website</h3>
-              <p className="text-gray-400 mb-4">
-                Admin dashboard website created during a hackathon for the ECOdz application, featuring user management and administrative controls with modern web technologies.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                {["React.js", "HTML", "CSS", "JavaScript"].map((tech, key) => (
-                  <span
-                    key={key}
-                    className="
-                      bg-blue-500/10 text-blue-500 py-1 px-3 
-                      rounded-full text-sm
-                      transition
-                      hover:bg-blue-500/20 hover:-translate-y-0.5
-                      hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)]
-                    "
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-              <div className="flex justify-between items-center">
-                <a
-                  href="#"
-                  className="text-blue-400 hover:text-blue-300 transition-colors my-4"
-                >
-                  View Project →
-                </a>
-              </div>
-            </div>
-
-            <div
-              className="
-              glass p-6 rounded-xl border border-white/10 
-              hover:-translate-y-1 hover:border-blue-500/30
-              hover:shadow-[0_4px_20px_rgba(59,130,246,0.1)]
-              transition-all
-            "
-            >
-              <h3 className="text-xl font-bold mb-2">Personal Portfolio</h3>
-              <p className="text-gray-400 mb-4">
-                A modern, responsive portfolio website showcasing my skills and projects with smooth animations and clean design principles.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                {["React.js", "TailwindCSS", "JavaScript", "Responsive Design"].map(
-                  (tech) => (
+          <div className="columns-1 md:columns-2 gap-8 space-y-8">
+            {projects.map((project, idx) => (
+              <div
+                key={idx}
+                className={`break-inside-avoid p-7 rounded-2xl border shadow-xl transition-all duration-200 hover:-translate-y-2 hover:shadow-2xl group ${
+                  project.color === "teal"
+                    ? "border-teal-400/20 bg-white/5 hover:border-teal-400/40"
+                    : "border-purple-400/20 bg-white/5 hover:border-purple-400/40"
+                }`}
+              >
+                <div className="mb-4 rounded-xl overflow-hidden shadow-md transition-all duration-200 group-hover:scale-105">
+                  {project.img}
+                </div>
+                <h3 className={`text-xl font-bold mb-2 ${project.color === "teal" ? "text-teal-300" : "text-purple-300"}`}>{project.title}</h3>
+                <p className="text-gray-200 mb-4">{project.desc}</p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.tech.map((tech, key) => (
                     <span
-                      key={tech}
-                      className="
-                      bg-blue-500/10 text-blue-500 py-1 px-3 
-                      rounded-full text-sm
-                      transition
-                      hover:bg-blue-500/20 hover:-translate-y-0.5
-                      hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)]
-                    "
+                      key={key}
+                      className={`py-1 px-3 rounded-full text-sm font-semibold transition ${
+                        project.color === "teal"
+                          ? "bg-teal-400/10 text-teal-300 hover:bg-teal-400/20 hover:shadow-md"
+                          : "bg-purple-400/10 text-purple-200 hover:bg-purple-400/20 hover:shadow-md"
+                      }`}
                     >
                       {tech}
                     </span>
-                  )
-                )}
-              </div>
-              <div className="flex justify-between items-center">
-                <a
-                  href="#"
-                  className="text-blue-400 hover:text-blue-300 transition-colors my-4"
-                >
-                  View Project →
-                </a>
-              </div>
-            </div>
-
-            <div
-              className="
-              glass p-6 rounded-xl border border-white/10 
-              hover:-translate-y-1 hover:border-blue-500/30
-              hover:shadow-[0_4px_20px_rgba(59,130,246,0.1)]
-              transition-all
-            "
-            >
-              <h3 className="text-xl font-bold mb-2">Coming Soon...</h3>
-              <p className="text-gray-400 mb-4">
-                Working on exciting new projects! Stay tuned for more innovative web and mobile applications.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                {["React.js", "Flutter", "New Technologies", "Innovation"].map((tech, key) => (
-                  <span
-                    key={key}
-                    className="
-                      bg-blue-500/10 text-blue-500 py-1 px-3 
-                      rounded-full text-sm
-                      transition
-                      hover:bg-blue-500/20 hover:-translate-y-0.5
-                      hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)]
-                    "
+                  ))}
+                </div>
+                <div className="flex justify-between items-center">
+                  <a
+                    href={project.link}
+                    className={`font-semibold transition-colors my-4 ${
+                      project.color === "teal"
+                        ? "text-teal-300 hover:text-teal-200"
+                        : "text-purple-300 hover:text-purple-200"
+                    }`}
                   >
-                    {tech}
-                  </span>
-                ))}
+                    {project.title === "Coming Soon..." ? "Stay Updated →" : "View Project →"}
+                  </a>
+                </div>
               </div>
-              <div className="flex justify-between items-center ">
-                <a
-                  href="#"
-                  className="text-blue-400 hover:text-blue-300 transition-colors my-4"
-                >
-                  Stay Updated →
-                </a>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </RevealOnScroll>

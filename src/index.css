@@ -6,9 +6,19 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-family: "Space Grotesk", sans-serif;
-  background: #0a0a0a;
-  color: #f3f4f6;
+  font-family: 'Inter', 'Space Grotesk', sans-serif;
+  background: linear-gradient(135deg, #1e003a 0%, #0a2e36 100%);
+  color: #f8fafc;
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: #1e003a;
+}
+::-webkit-scrollbar-thumb {
+  background: #2dd4bf;
+  border-radius: 4px;
 }
 
 @layer utilities {
@@ -21,11 +31,9 @@ body {
       opacity: 0;
     }
   }
-
   .animate-blink {
     animation: blink 0.8s step-end infinite;
   }
-
   @keyframes loading {
     0% {
       transform: translateX(-100%);
@@ -34,10 +42,25 @@ body {
       transform: translateX(250%);
     }
   }
-
   .animate-loading-bar {
     animation: loading 0.8s ease infinite;
   }
+  .animate-fade-in {
+    animation: fadeIn 1s ease-in;
+  }
+  .animate-slide-in {
+    animation: slideIn 1s ease-in;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
 
 .reveal {
@@ -45,7 +68,6 @@ body {
   transform: translateY(20px);
   transition: opacity 0.7s ease, transform 0.7s ease;
 }
-
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
